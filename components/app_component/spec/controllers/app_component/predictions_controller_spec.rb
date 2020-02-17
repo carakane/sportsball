@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 module AppComponent
-  RSpec.fdescribe PredictionsController, :type => :controller do
+  RSpec.describe PredictionsController, :type => :controller do
     routes { Engine.routes }
 
     before do

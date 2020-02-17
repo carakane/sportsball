@@ -1,32 +1,31 @@
-# require 'rails_helper'
+require 'rails_helper'
 
-# module AppComponent
-#   RSpec.describe PredictionsController, type: :request do
-#     # routes { AppComponent::Engine.routes }
+module AppComponent
+  RSpec.describe PredictionsController, type: :request do
+    # routes { AppComponent::Engine.routes }
 
-#     before do
-#       @team1 = create_team
-#       @team2 = create_team
-#     end
+    before do
+      @team1 = create_team
+      @team2 = create_team
+    end
 
-#     describe "GET new" do
-#       it "assigns all teams as @teams" do
-#         get :new, params: {}, session: {}
-#         expect(assigns(:teams)).to eq [@team1, @team2]
-#       end
-#     end
+    describe "GET new" do
+      it "assigns all teams as @teams" do
+        get '/app_component/predictions/new', params: {}
+        expect(assigns(:teams)).to eq [@team1, @team2]
+      end
+    end
 
-#     describe "POST create" do
-#       it "assigns a prediction as @prediction" do
-#         post :create,
-#             params: {first_team: {id: @team1.id}, second_team: {id: @team2.id}},
-#             session: {}
+    describe "POST create" do
+      it "assigns a prediction as @prediction" do
+        post '/app_component/predictions/',
+            params: {first_team: {id: @team1.id}, second_team: {id: @team2.id}}
 
-#         prediction = assigns(:prediction)
-#         expect(prediction).to be_a AppComponent::Prediction
-#         expect(prediction.first_team).to eq @team1
-#         expect(prediction.second_team).to eq @team2
-#       end
-#     end
-#   end
-# end
+        prediction = assigns(:prediction)
+        expect(prediction).to be_a AppComponent::Prediction
+        expect(prediction.first_team).to eq @team1
+        expect(prediction.second_team).to eq @team2
+      end
+    end
+  end
+end

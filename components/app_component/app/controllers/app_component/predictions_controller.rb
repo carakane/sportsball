@@ -7,7 +7,6 @@ module AppComponent
     end
 
     def create
-      puts toto: params
       predictor = Predictor.new(AppComponent::Team.all)
       predictor.learn(AppComponent::Game.all)
       @prediction = predictor.predict(
@@ -16,5 +15,3 @@ module AppComponent
     end
   end
 end
-
-# {:toto=><ActionController::Parameters {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}, "controller"=>"app_component/predictions", "action"=>"create"} permitted: false>}

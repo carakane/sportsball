@@ -3525,3 +3525,1069 @@ Processing by AppComponent::PredictionsController#new as HTML
   Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
   Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.2ms | Allocations: 134)
 Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1347)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAppComponent::Team Create (0.7ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:42:01.422641"], ["updated_at", "2020-02-17 20:42:01.422641"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAppComponent::Team Create (0.2ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:42:01.441216"], ["updated_at", "2020-02-17 20:42:01.441216"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"11"}, "second_team"=>{"id"=>"12"}}
+  [1m[36mAppComponent::Team Load (0.3ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.3ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.8ms | Allocations: 277)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 36ms (Views: 4.9ms | ActiveRecord: 1.1ms | Allocations: 6110)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAppComponent::Team Create (0.6ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:42:01.492930"], ["updated_at", "2020-02-17 20:42:01.492930"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:42:01.495346"], ["updated_at", "2020-02-17 20:42:01.495346"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 62)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 673)
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.0ms)[0m  [1m[31mDELETE FROM "app_component_games";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_games';[0m
+  [1m[35m (0.9ms)[0m  [1m[31mDELETE FROM "app_component_teams";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.9ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_teams';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:42:42.687772"], ["updated_at", "2020-02-17 20:42:42.687772"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:42:42.699405"], ["updated_at", "2020-02-17 20:42:42.699405"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 1.7ms | Allocations: 277)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 16ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 5957)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:42:42.727391"], ["updated_at", "2020-02-17 20:42:42.727391"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:42:42.728743"], ["updated_at", "2020-02-17 20:42:42.728743"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 62)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 673)
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (2.1ms)[0m  [1m[31mDELETE FROM "app_component_games";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_games';[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM "app_component_teams";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_teams';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UofL"], ["created_at", "2020-02-17 20:43:13.001526"], ["updated_at", "2020-02-17 20:43:13.001526"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UK"], ["created_at", "2020-02-17 20:43:13.011159"], ["updated_at", "2020-02-17 20:43:13.011159"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:13.012212"], ["updated_at", "2020-02-17 20:43:13.012212"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:13.013782"], ["updated_at", "2020-02-17 20:43:13.013782"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:13.014741"], ["updated_at", "2020-02-17 20:43:13.014741"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component" for 127.0.0.1 at 2020-02-17 15:43:13 -0500
+Processing by AppComponent::WelcomeController#index as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application (Duration: 9.0ms | Allocations: 10296)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 17274)
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:43:13 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 5.1ms | Allocations: 3891)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 6032)
+Started POST "/app_component/predictions" for 127.0.0.1 at 2020-02-17 15:43:13 -0500
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}, "commit"=>"What is it going to be?"}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 2.4ms | Allocations: 2170)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 5879)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:13.134420"], ["updated_at", "2020-02-17 20:43:13.134420"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:13.135922"], ["updated_at", "2020-02-17 20:43:13.135922"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.2ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:13.138178"], ["updated_at", "2020-02-17 20:43:13.138178"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:13.139166"], ["updated_at", "2020-02-17 20:43:13.139166"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.5ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:13.143219"], ["updated_at", "2020-02-17 20:43:13.143219"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:13.145536"], ["updated_at", "2020-02-17 20:43:13.145536"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.0ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 61)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 851)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:13.152149"], ["updated_at", "2020-02-17 20:43:13.152149"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:13.153405"], ["updated_at", "2020-02-17 20:43:13.153405"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 60)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 439)
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:13.158544"], ["updated_at", "2020-02-17 20:43:13.158544"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:13.159763"], ["updated_at", "2020-02-17 20:43:13.159763"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:13.160906"], ["updated_at", "2020-02-17 20:43:13.160906"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:13.164072"], ["updated_at", "2020-02-17 20:43:13.164072"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:13.165351"], ["updated_at", "2020-02-17 20:43:13.165351"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:13.166290"], ["updated_at", "2020-02-17 20:43:13.166290"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:13.167254"], ["updated_at", "2020-02-17 20:43:13.167254"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:13.168137"], ["updated_at", "2020-02-17 20:43:13.168137"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:13.171070"], ["updated_at", "2020-02-17 20:43:13.171070"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:13.172199"], ["updated_at", "2020-02-17 20:43:13.172199"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.9ms)[0m  [1m[31mDELETE FROM "app_component_games";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_games';[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM "app_component_teams";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_teams';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:31.951254"], ["updated_at", "2020-02-17 20:43:31.951254"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:31.960361"], ["updated_at", "2020-02-17 20:43:31.960361"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:31.971830"], ["updated_at", "2020-02-17 20:43:31.971830"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:31.973107"], ["updated_at", "2020-02-17 20:43:31.973107"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:31.973942"], ["updated_at", "2020-02-17 20:43:31.973942"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:31.977130"], ["updated_at", "2020-02-17 20:43:31.977130"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:31.978163"], ["updated_at", "2020-02-17 20:43:31.978163"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:31.980258"], ["updated_at", "2020-02-17 20:43:31.980258"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:31.981555"], ["updated_at", "2020-02-17 20:43:31.981555"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:31.983336"], ["updated_at", "2020-02-17 20:43:31.983336"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:32.058642"], ["updated_at", "2020-02-17 20:43:32.058642"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:32.060163"], ["updated_at", "2020-02-17 20:43:32.060163"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:32.063057"], ["updated_at", "2020-02-17 20:43:32.063057"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:32.064170"], ["updated_at", "2020-02-17 20:43:32.064170"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UofL"], ["created_at", "2020-02-17 20:43:32.066243"], ["updated_at", "2020-02-17 20:43:32.066243"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UK"], ["created_at", "2020-02-17 20:43:32.067688"], ["updated_at", "2020-02-17 20:43:32.067688"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:32.068758"], ["updated_at", "2020-02-17 20:43:32.068758"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:32.069814"], ["updated_at", "2020-02-17 20:43:32.069814"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:32.070902"], ["updated_at", "2020-02-17 20:43:32.070902"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component" for 127.0.0.1 at 2020-02-17 15:43:32 -0500
+Processing by AppComponent::WelcomeController#index as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application (Duration: 9.2ms | Allocations: 10295)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 17035)
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:43:32 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 3.9ms | Allocations: 3891)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 6032)
+Started POST "/app_component/predictions" for 127.0.0.1 at 2020-02-17 15:43:32 -0500
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}, "commit"=>"What is it going to be?"}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.2ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 3.0ms | Allocations: 2170)
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 5771)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:32.158263"], ["updated_at", "2020-02-17 20:43:32.158263"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:32.159540"], ["updated_at", "2020-02-17 20:43:32.159540"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 61)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 440)
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:32.163376"], ["updated_at", "2020-02-17 20:43:32.163376"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:32.164872"], ["updated_at", "2020-02-17 20:43:32.164872"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.3ms | Allocations: 60)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 850)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (2.0ms)[0m  [1m[31mDELETE FROM "app_component_games";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_games';[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM "app_component_teams";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_teams';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:55.207479"], ["updated_at", "2020-02-17 20:43:55.207479"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:55.216859"], ["updated_at", "2020-02-17 20:43:55.216859"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:55.220174"], ["updated_at", "2020-02-17 20:43:55.220174"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:55.221494"], ["updated_at", "2020-02-17 20:43:55.221494"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:55.232657"], ["updated_at", "2020-02-17 20:43:55.232657"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:43:55.235548"], ["updated_at", "2020-02-17 20:43:55.235548"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:43:55.236630"], ["updated_at", "2020-02-17 20:43:55.236630"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:55.237776"], ["updated_at", "2020-02-17 20:43:55.237776"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:55.239304"], ["updated_at", "2020-02-17 20:43:55.239304"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:55.240286"], ["updated_at", "2020-02-17 20:43:55.240286"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:55.244283"], ["updated_at", "2020-02-17 20:43:55.244283"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:55.245540"], ["updated_at", "2020-02-17 20:43:55.245540"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.4ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.7ms | Allocations: 277)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 15ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 5348)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:55.268498"], ["updated_at", "2020-02-17 20:43:55.268498"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:55.269680"], ["updated_at", "2020-02-17 20:43:55.269680"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.2ms | Allocations: 62)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 673)
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:55.298028"], ["updated_at", "2020-02-17 20:43:55.298028"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:55.299323"], ["updated_at", "2020-02-17 20:43:55.299323"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/predictions/new" for 127.0.0.1 at 2020-02-17 15:43:55 -0500
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:43:55.313364"], ["updated_at", "2020-02-17 20:43:55.313364"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:43:55.314455"], ["updated_at", "2020-02-17 20:43:55.314455"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UofL"], ["created_at", "2020-02-17 20:43:55.316202"], ["updated_at", "2020-02-17 20:43:55.316202"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UK"], ["created_at", "2020-02-17 20:43:55.317312"], ["updated_at", "2020-02-17 20:43:55.317312"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:55.318156"], ["updated_at", "2020-02-17 20:43:55.318156"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:55.319238"], ["updated_at", "2020-02-17 20:43:55.319238"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:43:55.320161"], ["updated_at", "2020-02-17 20:43:55.320161"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component" for 127.0.0.1 at 2020-02-17 15:43:55 -0500
+Processing by AppComponent::WelcomeController#index as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application (Duration: 8.4ms | Allocations: 10078)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 15816)
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:43:55 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 3.7ms | Allocations: 3823)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 5939)
+Started POST "/app_component/predictions" for 127.0.0.1 at 2020-02-17 15:43:55 -0500
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}, "commit"=>"What is it going to be?"}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.0ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 2.1ms | Allocations: 2168)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.2ms | Allocations: 5097)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.0ms)[0m  [1m[31mDELETE FROM "app_component_games";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_games';[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM "app_component_teams";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_teams';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:44:10.264844"], ["updated_at", "2020-02-17 20:44:10.264844"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:44:10.273406"], ["updated_at", "2020-02-17 20:44:10.273406"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:44:10.276248"], ["updated_at", "2020-02-17 20:44:10.276248"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:44:10.277425"], ["updated_at", "2020-02-17 20:44:10.277425"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/prediction/new" for 127.0.0.1 at 2020-02-17 15:44:10 -0500
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UofL"], ["created_at", "2020-02-17 20:44:10.293525"], ["updated_at", "2020-02-17 20:44:10.293525"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UK"], ["created_at", "2020-02-17 20:44:10.295195"], ["updated_at", "2020-02-17 20:44:10.295195"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:10.306398"], ["updated_at", "2020-02-17 20:44:10.306398"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:10.307572"], ["updated_at", "2020-02-17 20:44:10.307572"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:10.308530"], ["updated_at", "2020-02-17 20:44:10.308530"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component" for 127.0.0.1 at 2020-02-17 15:44:10 -0500
+Processing by AppComponent::WelcomeController#index as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application (Duration: 9.3ms | Allocations: 10295)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 17272)
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:44:10 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 4.0ms | Allocations: 3892)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 6033)
+Started POST "/app_component/predictions" for 127.0.0.1 at 2020-02-17 15:44:10 -0500
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}, "commit"=>"What is it going to be?"}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 2.2ms | Allocations: 2170)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 5879)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:44:10.388727"], ["updated_at", "2020-02-17 20:44:10.388727"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:44:10.390346"], ["updated_at", "2020-02-17 20:44:10.390346"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:10.391444"], ["updated_at", "2020-02-17 20:44:10.391444"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:10.392337"], ["updated_at", "2020-02-17 20:44:10.392337"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:10.393154"], ["updated_at", "2020-02-17 20:44:10.393154"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:44:10.397578"], ["updated_at", "2020-02-17 20:44:10.397578"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:44:10.398973"], ["updated_at", "2020-02-17 20:44:10.398973"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:10.399897"], ["updated_at", "2020-02-17 20:44:10.399897"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:44:10.402216"], ["updated_at", "2020-02-17 20:44:10.402216"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:44:10.403737"], ["updated_at", "2020-02-17 20:44:10.403737"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:44:10.407931"], ["updated_at", "2020-02-17 20:44:10.407931"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:44:10.408961"], ["updated_at", "2020-02-17 20:44:10.408961"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.0ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.2ms | Allocations: 61)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 851)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:44:10.415505"], ["updated_at", "2020-02-17 20:44:10.415505"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:44:10.416710"], ["updated_at", "2020-02-17 20:44:10.416710"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 60)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 439)
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (2.0ms)[0m  [1m[31mDELETE FROM "app_component_games";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_games';[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM "app_component_teams";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_teams';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UofL"], ["created_at", "2020-02-17 20:44:48.318208"], ["updated_at", "2020-02-17 20:44:48.318208"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UK"], ["created_at", "2020-02-17 20:44:48.328892"], ["updated_at", "2020-02-17 20:44:48.328892"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:48.330125"], ["updated_at", "2020-02-17 20:44:48.330125"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:48.331142"], ["updated_at", "2020-02-17 20:44:48.331142"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:48.332004"], ["updated_at", "2020-02-17 20:44:48.332004"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component" for 127.0.0.1 at 2020-02-17 15:44:48 -0500
+Processing by AppComponent::WelcomeController#index as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application (Duration: 8.4ms | Allocations: 10296)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 17274)
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:44:48 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 4.1ms | Allocations: 3891)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 6032)
+Started POST "/app_component/predictions" for 127.0.0.1 at 2020-02-17 15:44:48 -0500
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}, "commit"=>"What is it going to be?"}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 2.4ms | Allocations: 2170)
+Completed 200 OK in 9ms (Views: 4.1ms | ActiveRecord: 0.3ms | Allocations: 5879)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:44:48.419456"], ["updated_at", "2020-02-17 20:44:48.419456"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:44:48.421091"], ["updated_at", "2020-02-17 20:44:48.421091"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:44:48.425149"], ["updated_at", "2020-02-17 20:44:48.425149"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:44:48.426966"], ["updated_at", "2020-02-17 20:44:48.426966"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:48.428119"], ["updated_at", "2020-02-17 20:44:48.428119"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:48.429253"], ["updated_at", "2020-02-17 20:44:48.429253"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:48.430251"], ["updated_at", "2020-02-17 20:44:48.430251"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:44:48.432868"], ["updated_at", "2020-02-17 20:44:48.432868"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:44:48.434052"], ["updated_at", "2020-02-17 20:44:48.434052"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:44:48.435054"], ["updated_at", "2020-02-17 20:44:48.435054"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:44:48.440478"], ["updated_at", "2020-02-17 20:44:48.440478"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:44:48.441731"], ["updated_at", "2020-02-17 20:44:48.441731"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.0ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.2ms | Allocations: 61)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 851)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.2ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:44:48.446756"], ["updated_at", "2020-02-17 20:44:48.446756"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:44:48.447759"], ["updated_at", "2020-02-17 20:44:48.447759"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 60)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 439)
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:44:48.473945"], ["updated_at", "2020-02-17 20:44:48.473945"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:44:48.475393"], ["updated_at", "2020-02-17 20:44:48.475393"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component/prediction/new" for 127.0.0.1 at 2020-02-17 15:44:48 -0500
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:44:48.484136"], ["updated_at", "2020-02-17 20:44:48.484136"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:44:48.485429"], ["updated_at", "2020-02-17 20:44:48.485429"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.2ms)[0m  [1m[31mDELETE FROM "app_component_games";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_games';[0m
+  [1m[35m (1.0ms)[0m  [1m[31mDELETE FROM "app_component_teams";[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_teams';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.5ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:45:08.553936"], ["updated_at", "2020-02-17 20:45:08.553936"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:45:08.564197"], ["updated_at", "2020-02-17 20:45:08.564197"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.7ms | Allocations: 277)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 4201)
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:45:08.578324"], ["updated_at", "2020-02-17 20:45:08.578324"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:45:08.579536"], ["updated_at", "2020-02-17 20:45:08.579536"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 62)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 2364)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:45:08.592576"], ["updated_at", "2020-02-17 20:45:08.592576"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:45:08.594218"], ["updated_at", "2020-02-17 20:45:08.594218"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:08.605073"], ["updated_at", "2020-02-17 20:45:08.605073"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:45:08.607671"], ["updated_at", "2020-02-17 20:45:08.607671"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:45:08.608960"], ["updated_at", "2020-02-17 20:45:08.608960"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.2ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:08.609832"], ["updated_at", "2020-02-17 20:45:08.609832"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:08.611256"], ["updated_at", "2020-02-17 20:45:08.611256"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:08.612200"], ["updated_at", "2020-02-17 20:45:08.612200"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.2ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:45:08.614346"], ["updated_at", "2020-02-17 20:45:08.614346"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:45:08.615481"], ["updated_at", "2020-02-17 20:45:08.615481"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:45:08.637385"], ["updated_at", "2020-02-17 20:45:08.637385"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:45:08.638796"], ["updated_at", "2020-02-17 20:45:08.638796"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:45:08 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 10.5ms | Allocations: 11274)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms | Allocations: 17014)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:45:08.677159"], ["updated_at", "2020-02-17 20:45:08.677159"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:45:08.678752"], ["updated_at", "2020-02-17 20:45:08.678752"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UofL"], ["created_at", "2020-02-17 20:45:08.732807"], ["updated_at", "2020-02-17 20:45:08.732807"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UK"], ["created_at", "2020-02-17 20:45:08.734512"], ["updated_at", "2020-02-17 20:45:08.734512"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:08.735562"], ["updated_at", "2020-02-17 20:45:08.735562"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:08.736619"], ["updated_at", "2020-02-17 20:45:08.736619"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:08.737526"], ["updated_at", "2020-02-17 20:45:08.737526"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component" for 127.0.0.1 at 2020-02-17 15:45:08 -0500
+Processing by AppComponent::WelcomeController#index as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application (Duration: 21.7ms | Allocations: 2646)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 4770)
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:45:08 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 1.1ms | Allocations: 531)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 1893)
+Started POST "/app_component/predictions" for 127.0.0.1 at 2020-02-17 15:45:08 -0500
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}, "commit"=>"What is it going to be?"}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.0ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 2.4ms | Allocations: 2171)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 5101)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (2.0ms)[0m  [1m[31mDELETE FROM "app_component_games";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_games';[0m
+  [1m[35m (0.7ms)[0m  [1m[31mDELETE FROM "app_component_teams";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'app_component_teams';[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.6ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:45:48.291460"], ["updated_at", "2020-02-17 20:45:48.291460"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:45:48.301337"], ["updated_at", "2020-02-17 20:45:48.301337"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 0.7ms | Allocations: 277)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 3963)
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:45:48.315063"], ["updated_at", "2020-02-17 20:45:48.315063"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:45:48.316845"], ["updated_at", "2020-02-17 20:45:48.316845"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.1ms | Allocations: 62)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 2341)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:45:48.351023"], ["updated_at", "2020-02-17 20:45:48.351023"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:45:48.352578"], ["updated_at", "2020-02-17 20:45:48.352578"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/app_component/predictions/" for 127.0.0.1 at 2020-02-17 15:45:48 -0500
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.0ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 7.5ms | Allocations: 9623)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.2ms | Allocations: 15799)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 1"], ["created_at", "2020-02-17 20:45:48.387925"], ["updated_at", "2020-02-17 20:45:48.387925"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Some name 2"], ["created_at", "2020-02-17 20:45:48.389509"], ["updated_at", "2020-02-17 20:45:48.389509"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:45:48 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 4.4ms | Allocations: 3821)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 5417)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UofL"], ["created_at", "2020-02-17 20:45:48.406869"], ["updated_at", "2020-02-17 20:45:48.406869"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "UK"], ["created_at", "2020-02-17 20:45:48.408016"], ["updated_at", "2020-02-17 20:45:48.408016"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:48.420280"], ["updated_at", "2020-02-17 20:45:48.420280"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:48.421795"], ["updated_at", "2020-02-17 20:45:48.421795"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 2], ["second_team_id", 1], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:48.422809"], ["updated_at", "2020-02-17 20:45:48.422809"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/app_component" for 127.0.0.1 at 2020-02-17 15:45:48 -0500
+Processing by AppComponent::WelcomeController#index as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/welcome/index.html.slim within layouts/app_component/application (Duration: 3.0ms | Allocations: 2630)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4751)
+Started GET "/app_component/predictions/new" for 127.0.0.1 at 2020-02-17 15:45:48 -0500
+Processing by AppComponent::PredictionsController#new as HTML
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/new.html.slim within layouts/app_component/application (Duration: 1.0ms | Allocations: 531)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 1893)
+Started POST "/app_component/predictions" for 127.0.0.1 at 2020-02-17 15:45:48 -0500
+Processing by AppComponent::PredictionsController#create as HTML
+  Parameters: {"first_team"=>{"id"=>"1"}, "second_team"=>{"id"=>"2"}, "commit"=>"What is it going to be?"}
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams"[0m
+  [1m[36mAppComponent::Game Load (0.1ms)[0m  [1m[34mSELECT "app_component_games".* FROM "app_component_games"[0m
+  [1m[36mAppComponent::Team Load (0.1ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppComponent::Team Load (0.0ms)[0m  [1m[34mSELECT "app_component_teams".* FROM "app_component_teams" WHERE "app_component_teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application
+  Rendered /Users/ckane/code/sportsball/components/app_component/app/views/app_component/predictions/create.html.slim within layouts/app_component/application (Duration: 0.2ms | Allocations: 73)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2753)
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.4ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:45:48.467000"], ["updated_at", "2020-02-17 20:45:48.467000"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:45:48.468431"], ["updated_at", "2020-02-17 20:45:48.468431"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:48.469330"], ["updated_at", "2020-02-17 20:45:48.469330"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:48.470235"], ["updated_at", "2020-02-17 20:45:48.470235"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 2], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:48.471076"], ["updated_at", "2020-02-17 20:45:48.471076"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:45:48.474147"], ["updated_at", "2020-02-17 20:45:48.474147"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:45:48.475432"], ["updated_at", "2020-02-17 20:45:48.475432"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Game Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_games" ("date", "location", "first_team_id", "second_team_id", "winning_team", "first_team_score", "second_team_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["date", "2020-02-17 00:00:00"], ["location", "Somewhere"], ["first_team_id", 1], ["second_team_id", 2], ["winning_team", 1], ["first_team_score", 2], ["second_team_score", 3], ["created_at", "2020-02-17 20:45:48.476450"], ["updated_at", "2020-02-17 20:45:48.476450"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.3ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "A"], ["created_at", "2020-02-17 20:45:48.478819"], ["updated_at", "2020-02-17 20:45:48.478819"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAppComponent::Team Create (0.1ms)[0m  [1m[32mINSERT INTO "app_component_teams" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "B"], ["created_at", "2020-02-17 20:45:48.479893"], ["updated_at", "2020-02-17 20:45:48.479893"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
