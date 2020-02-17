@@ -1,5 +1,5 @@
 h1 Predictions
-= form_tag new_prediction_path, method: "post" do |f|
+= form_tag predictions_path, method: "post" do |f|
   .field
     = label_tag :first_team_id
     = collection_select(:first_team, :id, @teams, :id, :name)
